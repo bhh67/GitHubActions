@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "example" {
-  bucket = "anuj-githubactions-bucket"
+  bucket = "bernd-githubactions-bucket"
 
   tags = {
     Name        = "My bucket"

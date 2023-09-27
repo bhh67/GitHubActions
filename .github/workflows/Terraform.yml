@@ -46,3 +46,11 @@ jobs:
       run: |
         terraform init
         terraform apply --auto-approve
+        
+    - name: Cache state files
+      id: cache-state
+      uses: actions/cache@v3
+      with:
+        path: |
+          terraform.tfstate*
+        key: ${{ runner.os }}-state 
